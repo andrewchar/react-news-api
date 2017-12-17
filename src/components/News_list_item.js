@@ -1,13 +1,16 @@
 import React from 'react';
 
 const NewsListItem = (props) => {
-  if (props.newsArticle.url == null || props.newsArticle.author == null ||  props.newsArticle.title == null) {
-    return null
+  let backGroundImage = props.newsArticle.urlToImage;
+  if (backGroundImage === null) {
+    backGroundImage = 'http://via.placeholder.com/200x200/42f7ee/000000?text=Image+Unavailable';
   }
-
-  const backGroundImage = props.newsArticle.urlToImage;
   const imageStyle = {
     backgroundImage: `url(${backGroundImage})`
+  }
+
+  if (props.newsArticle.url == null ||  props.newsArticle.title == null) {
+    return null
   }
 
   return (

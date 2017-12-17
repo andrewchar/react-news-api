@@ -54,6 +54,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
   .newsArticle-image {
     width: 100px;
     height: 100px;
